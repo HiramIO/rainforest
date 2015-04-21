@@ -1,0 +1,10 @@
+<h1> Products!</h1>
+<% @products.each do |product| %>
+  <p>
+    <%= link_to product.name, product %>,
+    $<%= product.price_in_cents %>
+    - <%= product.description %>
+  </p>
+
+<% end %>
+  <%= link_to "New product!", "/products/new" %>
